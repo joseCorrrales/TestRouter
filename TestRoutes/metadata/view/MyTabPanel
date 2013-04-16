@@ -1,0 +1,60 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyTabPanel",
+        "designer|initialView": true
+    },
+    "designerId": "f10678fc-990d-4c16-b191-0c66d15f88dd",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Home",
+                "html": "Welcome!",
+                "itemId": "home",
+                "designer|userClassName": "MyContainer"
+            },
+            "designerId": "09640bd7-1042-4124-912e-4cc3e41c7f44"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "About",
+                "html": "We are awesome.",
+                "itemId": "about",
+                "designer|userClassName": "MyContainer1"
+            },
+            "designerId": "361a8c7d-b6c5-45c4-8567-39841719c095"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Contact",
+                "html": "Just holler!",
+                "itemId": "contact",
+                "designer|userClassName": "MyContainer2"
+            },
+            "designerId": "648556d0-a428-490b-a597-645a008a11ad"
+        }
+    ]
+}

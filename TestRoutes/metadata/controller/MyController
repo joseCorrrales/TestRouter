@@ -1,0 +1,112 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "5976743b-1f78-4c84-be22-eab725eb893e",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "main",
+                "ref": "main",
+                "selector": ">tabpanel"
+            },
+            "designerId": "66c0ad4d-9278-4dab-98bb-c5ff072a8814"
+        },
+        {
+            "type": "Ext.app.Route",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "tab/:tabId",
+                "designer|userClassName": "gotoTab",
+                "fn": "gotoTab",
+                "designer|params": [
+                    "tabId"
+                ],
+                "implHandler": [
+                    "var tabPanel = this.getMain(), //uses our Controller Reference",
+                    "    tabCmp = tabPanel.child('#' + tabId);",
+                    "tabPanel.setActiveItem(tabCmp || 0);"
+                ]
+            },
+            "designerId": "f91b75b2-d291-4e60-a2de-d86fbd56cf87",
+            "cn": [
+                {
+                    "type": "routecondition",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "RouteCondition",
+                        "param": "tabId",
+                        "condition": "[a-zA-Z]+"
+                    },
+                    "designerId": "3bbfb6ec-0642-4b03-a927-59d7a6d9eb50"
+                }
+            ]
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelActiveItemChange",
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: 'tab/' + value.getItemId()",
+                    "}), true);"
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "main"
+            },
+            "designerId": "595f3f8f-b3b5-48c6-9334-30efce66158b"
+        },
+        {
+            "type": "controllerbeforefilter",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "checkMinute",
+                "fn": "checkMinute",
+                "designer|params": [
+                    "[\"action\"]"
+                ],
+                "implHandler": [
+                    "if ((new Date()).getMinutes() % 2) {",
+                    "    action.resume();",
+                    "} else {",
+                    "    Ext.Msg.alert('Oops,', 'You can only link to this tab during' + ",
+                    "        ' odd-numbered minutes! Why? Great question.');",
+                    "}"
+                ],
+                "routeAction": "gotoTab"
+            },
+            "designerId": "261997e5-a7bf-4e9e-82cc-1be86b3bb107"
+        }
+    ]
+}

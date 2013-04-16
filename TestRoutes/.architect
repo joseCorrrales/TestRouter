@@ -1,0 +1,65 @@
+{
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": false,
+        "f10678fc-990d-4c16-b191-0c66d15f88dd": {
+            "id": "f10678fc-990d-4c16-b191-0c66d15f88dd",
+            "cn": [
+                {
+                    "id": "09640bd7-1042-4124-912e-4cc3e41c7f44"
+                },
+                {
+                    "id": "361a8c7d-b6c5-45c4-8567-39841719c095"
+                },
+                {
+                    "id": "648556d0-a428-490b-a597-645a008a11ad"
+                }
+            ]
+        },
+        "5976743b-1f78-4c84-be22-eab725eb893e": {
+            "id": "5976743b-1f78-4c84-be22-eab725eb893e",
+            "cn": [
+                {
+                    "id": "66c0ad4d-9278-4dab-98bb-c5ff072a8814"
+                },
+                {
+                    "id": "f91b75b2-d291-4e60-a2de-d86fbd56cf87",
+                    "cn": [
+                        {
+                            "id": "3bbfb6ec-0642-4b03-a927-59d7a6d9eb50"
+                        }
+                    ]
+                },
+                {
+                    "id": "595f3f8f-b3b5-48c6-9334-30efce66158b"
+                },
+                {
+                    "id": "261997e5-a7bf-4e9e-82cc-1be86b3bb107"
+                }
+            ]
+        },
+        "689b44d9-0fc8-4272-9e94-0d4f3d07b4a2": {
+            "id": "689b44d9-0fc8-4272-9e94-0d4f3d07b4a2"
+        }
+    },
+    "tabState": {
+        "openTabs": [
+            "f10678fc-990d-4c16-b191-0c66d15f88dd",
+            "5976743b-1f78-4c84-be22-eab725eb893e"
+        ]
+    },
+    "canvasState": {
+        "topInstance": "f10678fc-990d-4c16-b191-0c66d15f88dd"
+    },
+    "inspectorState": {
+        "topInstance": "5976743b-1f78-4c84-be22-eab725eb893e",
+        "selectedInstance": "5976743b-1f78-4c84-be22-eab725eb893e"
+    },
+    "codeState": {
+        "topInstance": "5976743b-1f78-4c84-be22-eab725eb893e"
+    },
+    "editMode": "code"
+}
